@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
-from downloader import download_video
+from .downloader import download_video
 import os
 import re
 
