@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.py"
+    }
+  ]
+}
+```<grok:render card_id="ddee48" card_type="citation_card" type="render_inline_citation">
+<argument name="citation_id">9</argument>
+</grok:render><grok:render card_id="dc19b1" card_type="citation_card" type="render_inline_citation">
+<argument name="citation_id">10</argument>
+</grok:render><grok:render card_id="2e18d8" card_type="citation_card" type="render_inline_citation">
+<argument name="citation_id">12</argument>
+</grok:render>
