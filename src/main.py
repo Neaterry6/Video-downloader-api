@@ -34,7 +34,7 @@ async def download_video(url: str):
         "cookiefile": cookiefile,
         "quiet": True,
         "no_warnings": True,
-        "format": "bestvideo+bestaudio/best",  # Attempts to merge best video and audio
+        "format": "best",  # Use single stream to avoid ffmpeg dependency
         "outtmpl": "%(id)s.%(ext)s",  # Save with video ID as filename
         "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     }
@@ -63,4 +63,4 @@ async def download_video(url: str):
             if os.path.exists(filename):
                 os.unlink(filename)
         except Exception as e:
-            logger.warning(f"Cleanup(cleanup failed: {str(e)}")
+            logger.warning(f"Cleanup failed: {str(e)}")
